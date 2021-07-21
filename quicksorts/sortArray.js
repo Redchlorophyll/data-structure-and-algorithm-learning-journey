@@ -1,4 +1,4 @@
-function quicksort(arr, angka=1) {
+function quicksort(arr) {
 	const pivot = arr[0];
 	const left = [];
 	const right = [];
@@ -16,8 +16,8 @@ function quicksort(arr, angka=1) {
 		}
 	}
 
-	const qsLeft = quicksort(left, angka+1);
-	const qsRight = quicksort(right, angka+1);
+	const qsLeft = quicksort(left);
+	const qsRight = quicksort(right);
 
 	result = [...qsLeft, pivot, ...qsRight];
 
